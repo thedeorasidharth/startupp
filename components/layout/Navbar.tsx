@@ -67,7 +67,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center">
             <Link
               href="/contact"
-              className="h-[56px] px-[32px] inline-flex items-center justify-center text-xs font-bold uppercase tracking-widest text-white rounded-[16px] bg-primary hover:bg-primary/95 transition-all duration-300 shadow-button hover:shadow-primary/30 hover:-translate-y-0.5 hover:scale-[1.02]"
+              className="px-8 btn-custom btn-radius inline-flex items-center justify-center text-xs font-semibold uppercase tracking-widest text-white bg-primary hover:bg-primary/95 transition-all duration-300 shadow-button hover:shadow-primary/30 hover:-translate-y-0.5 hover:scale-[1.02]"
             >
               Consultation
             </Link>
@@ -129,7 +129,7 @@ export default function Navbar() {
             <div className="p-6">
               <Link
                 href="/contact"
-                className="block w-full py-4 text-center font-bold text-white rounded-[16px] bg-primary hover:bg-primary/95 transition-all text-sm uppercase tracking-wider shadow-button"
+                className="block w-full py-4 text-center font-semibold text-white btn-radius bg-primary hover:bg-primary/95 transition-all text-sm uppercase tracking-wider shadow-button"
                 onClick={() => setMobileOpen(false)}
               >
                 Book Free Consultation

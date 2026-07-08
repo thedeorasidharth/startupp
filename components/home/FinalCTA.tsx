@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function FinalCTA() {
   return (
-    <section className="relative py-[220px] overflow-hidden bg-white">
+    <section className="relative section-padding overflow-hidden bg-white">
       {/* Soft background glows */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-primary/3 rounded-full blur-[150px]" />
@@ -23,7 +23,7 @@ export default function FinalCTA() {
       <div className="container-custom relative z-10 text-center">
         {/* Badge */}
         <FadeUp>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface border border-border shadow-sm text-xs text-muted mb-[32px] font-semibold">
+          <div className="inline-flex items-center gap-2 badge-custom bg-surface border border-border shadow-sm text-xs text-muted spacing-eyebrow-heading font-semibold">
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             Accepting projects for this quarter
           </div>
@@ -32,24 +32,24 @@ export default function FinalCTA() {
         {/* H1 Headline (Heading -> Paragraph gap = 32px) */}
         <AnimatedText
           text="Ready to Build Something Incredible?"
-          className="heading-xl text-[40px] md:text-[56px] lg:text-[72px] text-foreground mb-[32px] max-w-[850px] mx-auto leading-none tracking-tight font-bold"
+          className="heading-xl text-[40px] md:text-[56px] lg:text-[72px] text-foreground spacing-heading-paragraph content-width-heading mx-auto leading-none tracking-tight font-bold"
           delay={0.1}
         />
 
         {/* Paragraph (Paragraph -> CTA gap = 48px, max-width = 650px, text size = 20px) */}
         <FadeUp delay={0.35}>
-          <p className="text-muted text-[20px] leading-[1.7] max-w-[650px] mx-auto mb-[48px] font-medium">
+          <p className="text-muted text-[20px] leading-[1.7] content-width-paragraph mx-auto spacing-paragraph-cta font-medium">
             Let's turn your vision into a custom digital experience. Book a free project consultation to discuss your requirements.
           </p>
         </FadeUp>
 
         {/* CTAs (Height: 56px, Padding: px-[32px], rounded-[16px]) */}
         <FadeUp delay={0.5}>
-          <div className="flex flex-wrap items-center justify-center gap-[16px] mb-[40px]">
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
             <MagneticButton>
               <Link
                 href="/contact"
-                className="h-[56px] px-[32px] rounded-[16px] bg-primary text-white font-bold text-xs uppercase tracking-widest hover:bg-primary/95 transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-[10px] shadow-sm"
+                className="px-8 btn-custom btn-radius bg-primary text-white font-semibold text-xs uppercase tracking-widest hover:bg-primary/95 transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2.5 shadow-sm"
               >
                 <Calendar size={16} />
                 Book Consultation
@@ -59,7 +59,7 @@ export default function FinalCTA() {
             <MagneticButton>
               <Link
                 href="/portfolio"
-                className="h-[56px] px-[32px] rounded-[16px] border border-border bg-white text-foreground font-bold text-xs uppercase tracking-widest hover:bg-surface transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-[10px]"
+                className="px-8 btn-custom btn-radius border border-border bg-white text-foreground font-semibold text-xs uppercase tracking-widest hover:bg-surface transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2.5"
               >
                 View Our Work
               </Link>

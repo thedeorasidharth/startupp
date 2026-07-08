@@ -26,19 +26,19 @@ export default function ContactSection() {
 
       <div className="container-custom relative z-10">
         
-        {/* Asymmetrical Layout: Left channels (0.8), Right Form (1.2), Grid Gap: 40px */}
-        <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-[40px] items-start">
+        {/* Asymmetrical Layout: Left channels (1), Right Form (1.5), Grid Gap: 40px */}
+        <div className="grid lg:grid-cols-[1fr_1.5fr] grid-gap items-start">
           
           {/* Left Column: Direct channels */}
-          <div className="space-y-[40px]">
+          <div className="flex flex-col grid-gap">
             <div>
               <FadeUp>
-                <p className="text-xs uppercase tracking-[0.3em] text-primary font-bold mb-[16px]">Contact Us</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-primary font-bold spacing-eyebrow-heading">Contact Us</p>
               </FadeUp>
               {/* H2 title scaling to 56px, gap to paragraph = 32px */}
               <AnimatedText
                 text="Let's Build Something Amazing."
-                className="heading-lg text-[32px] md:text-[44px] lg:text-[56px] text-foreground mb-[32px]"
+                className="heading-lg text-[32px] md:text-[44px] lg:text-[56px] text-foreground spacing-heading-paragraph"
                 delay={0.1}
               />
               <FadeUp delay={0.2}>
@@ -49,10 +49,10 @@ export default function ContactSection() {
             </div>
 
             {/* Channels List (Card to Card gap = 32px) */}
-            <div className="space-y-[32px]">
+            <div className="flex flex-col spacing-card-card">
               {/* WhatsApp */}
               <FadeUp delay={0.3}>
-                <div className="flex gap-[24px] items-start">
+                <div className="flex gap-6 items-start">
                   <div className="w-12 h-12 rounded-xl bg-green-500/5 flex items-center justify-center shrink-0 border border-green-500/10">
                     <MessageCircle size={20} className="text-green-500" />
                   </div>
@@ -73,7 +73,7 @@ export default function ContactSection() {
 
               {/* Email */}
               <FadeUp delay={0.4}>
-                <div className="flex gap-[24px] items-start">
+                <div className="flex gap-6 items-start">
                   <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center shrink-0 border border-primary/10">
                     <Mail size={20} className="text-primary" />
                   </div>
@@ -94,15 +94,15 @@ export default function ContactSection() {
 
           {/* Right Column: Inquiry Form */}
           <FadeUp delay={0.2}>
-            <div className="rounded-[28px] bg-white border border-border p-12 shadow-premium">
+            <div className="card-radius bg-white border border-border p-12 shadow-premium">
               <h3 className="text-2xl font-bold text-foreground mb-2 heading-lg">Consultation Request</h3>
               <p className="text-muted text-sm mb-8">Tell us about your brand positioning goals.</p>
 
-              <form onSubmit={handleSubmit} className="space-y-[32px]">
+              <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Form fields gaps: 32px */}
-                <div className="grid md:grid-cols-2 gap-[32px]">
+                <div className="grid md:grid-cols-2 gap-8">
                   <div className="relative">
-                    <label htmlFor="name" className="block text-[10px] uppercase tracking-wider text-muted font-bold mb-[8px]">Name</label>
+                    <label htmlFor="name" className="block text-[10px] uppercase tracking-wider text-muted font-bold mb-2">Name</label>
                     <input
                       id="name"
                       type="text"
@@ -110,11 +110,11 @@ export default function ContactSection() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Alex Rivera"
-                      className="w-full h-[58px] bg-transparent border-b border-border text-foreground placeholder-muted/40 text-sm focus:outline-none focus:border-primary transition-colors"
+                      className="input-custom placeholder-muted/40"
                     />
                   </div>
                   <div className="relative">
-                    <label htmlFor="email" className="block text-[10px] uppercase tracking-wider text-muted font-bold mb-[8px]">Email</label>
+                    <label htmlFor="email" className="block text-[10px] uppercase tracking-wider text-muted font-bold mb-2">Email</label>
                     <input
                       id="email"
                       type="email"
@@ -122,43 +122,43 @@ export default function ContactSection() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="alex@company.com"
-                      className="w-full h-[58px] bg-transparent border-b border-border text-foreground placeholder-muted/40 text-sm focus:outline-none focus:border-primary transition-colors"
+                      className="input-custom placeholder-muted/40"
                     />
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-[32px]">
+                <div className="grid md:grid-cols-2 gap-8">
                   <div className="relative">
-                    <label htmlFor="phone" className="block text-[10px] uppercase tracking-wider text-muted font-bold mb-[8px]">Phone</label>
+                    <label htmlFor="phone" className="block text-[10px] uppercase tracking-wider text-muted font-bold mb-2">Phone</label>
                     <input
                       id="phone"
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+1 (555) 000-0000"
-                      className="w-full h-[58px] bg-transparent border-b border-border text-foreground placeholder-muted/40 text-sm focus:outline-none focus:border-primary transition-colors"
+                      className="input-custom placeholder-muted/40"
                     />
                   </div>
                   <div className="relative">
-                    <label htmlFor="business" className="block text-[10px] uppercase tracking-wider text-muted font-bold mb-[8px]">Business Name</label>
+                    <label htmlFor="business" className="block text-[10px] uppercase tracking-wider text-muted font-bold mb-2">Business Name</label>
                     <input
                       id="business"
                       type="text"
                       value={formData.business}
                       onChange={(e) => setFormData({ ...formData, business: e.target.value })}
                       placeholder="Nova Corp"
-                      className="w-full h-[58px] bg-transparent border-b border-border text-foreground placeholder-muted/40 text-sm focus:outline-none focus:border-primary transition-colors"
+                      className="input-custom placeholder-muted/40"
                     />
                   </div>
                 </div>
 
                 <div className="relative">
-                  <label htmlFor="service" className="block text-[10px] uppercase tracking-wider text-muted font-bold mb-[8px]">Required Service</label>
+                  <label htmlFor="service" className="block text-[10px] uppercase tracking-wider text-muted font-bold mb-2">Required Service</label>
                   <select
                     id="service"
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full h-[58px] bg-transparent border-b border-border text-foreground text-sm focus:outline-none focus:border-primary transition-colors appearance-none"
+                    className="input-custom appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M7%209l3%203%203-3%22%20stroke%3D%22%236B7280%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[position:right_16px_center] bg-[size:20px] bg-no-repeat text-foreground text-sm focus:outline-none"
                   >
                     <option value="">Select a service...</option>
                     <option value="web-development">Web Development</option>
@@ -171,7 +171,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="relative">
-                  <label htmlFor="message" className="block text-[10px] uppercase tracking-wider text-muted font-bold mb-[8px]">Message</label>
+                  <label htmlFor="message" className="block text-[10px] uppercase tracking-wider text-muted font-bold mb-2">Message</label>
                   <textarea
                     id="message"
                     required
@@ -179,13 +179,13 @@ export default function ContactSection() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tell us about your project goals..."
-                    className="w-full h-[180px] py-3 bg-transparent border-b border-border text-foreground placeholder-muted/40 text-sm focus:outline-none focus:border-primary transition-colors resize-none"
+                    className="w-full h-[180px] p-4 bg-[#FCFCFD] border border-border rounded-xl text-foreground placeholder-muted/40 text-sm focus:outline-none focus:border-primary transition-colors resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="flex items-center justify-center gap-3 w-full h-[60px] rounded-[16px] bg-primary text-white font-bold text-xs uppercase tracking-widest hover:bg-primary/95 transition-all duration-300 shadow-sm hover:scale-[1.02]"
+                  className="w-full btn-custom btn-radius bg-primary text-white hover:bg-primary/95 transition-all duration-300 shadow-sm hover:scale-[1.02] flex items-center justify-center gap-2.5"
                 >
                   <Send size={14} />
                   Submit Inquiry

@@ -67,14 +67,14 @@ export default function Testimonials() {
 
       <div className="container-custom relative z-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 section-heading">
           <div>
             <FadeUp>
-              <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold mb-4">Client Love</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-primary font-semibold spacing-eyebrow-heading">Client Love</p>
             </FadeUp>
             <AnimatedText
               text="What Our Clients Say About Us"
-              className="heading-lg text-4xl md:text-5xl text-foreground max-w-xl"
+              className="heading-lg text-4xl md:text-5xl text-foreground content-width-heading"
               delay={0.1}
             />
           </div>
@@ -99,7 +99,7 @@ export default function Testimonials() {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 spacing-card-card">
           {visible.map((t, i) => (
             <motion.div
               key={`${t.id}-${current}`}
@@ -107,7 +107,7 @@ export default function Testimonials() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className={`relative rounded-3xl p-8 border transition-all duration-500 shadow-premium ${
+              className={`relative card-radius p-8 border transition-all duration-500 shadow-premium ${
                 i === 0
                   ? "border-primary/20 bg-card"
                   : "border-black/5 bg-card/60"
@@ -121,14 +121,14 @@ export default function Testimonials() {
               />
 
               {/* Stars */}
-              <div className="flex gap-1 mb-5">
+              <div className="flex gap-1 mb-6">
                 {[...Array(t.rating)].map((_, j) => (
                   <Star key={j} size={14} className="fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
 
               {/* Text */}
-              <p className="text-muted text-sm leading-relaxed mb-6">"{t.text}"</p>
+              <p className="text-muted text-sm leading-relaxed mb-8">"{t.text}"</p>
 
               {/* Author */}
               <div className="flex items-center gap-3">

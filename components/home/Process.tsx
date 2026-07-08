@@ -47,7 +47,7 @@ function StepRow({ step, index }: { step: typeof steps[0]; index: number }) {
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: 0.05 }}
-      className="flex gap-[32px] items-start py-8 border-b border-border/60 relative group"
+      className="flex gap-[32px] items-start spacing-timeline-step border-b border-border/60 relative group"
     >
       <span className="text-xs font-bold text-primary tracking-widest shrink-0 w-8">
         {step.number}
@@ -72,14 +72,14 @@ export default function Process() {
         <div className="grid lg:grid-cols-[1fr_1.5fr] gap-[40px] items-start">
           
           {/* Left Sticky Panel */}
-          <div className="lg:sticky lg:top-32 max-w-[450px] mb-[64px] lg:mb-0">
+          <div className="lg:sticky lg:top-32 max-w-[450px] section-heading-sticky">
             <FadeUp>
-              <p className="text-xs uppercase tracking-[0.3em] text-primary font-bold mb-[16px]">Our Process</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-primary font-bold spacing-eyebrow-heading">Our Process</p>
             </FadeUp>
             {/* H2 title scaling to 56px, gap to paragraph = 32px */}
             <AnimatedText
               text="Bespoke Design, Strict Development"
-              className="heading-lg text-[32px] md:text-[44px] lg:text-[56px] text-foreground mb-[32px] leading-none"
+              className="heading-lg text-[32px] md:text-[44px] lg:text-[56px] text-foreground spacing-heading-paragraph leading-none"
               delay={0.1}
             />
             <FadeUp delay={0.25}>

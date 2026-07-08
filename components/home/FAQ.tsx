@@ -31,7 +31,7 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
     <FadeUp delay={index * 0.05}>
       <div className="border-b border-border/60">
         <button
-          className="w-full flex items-center justify-between py-6 text-left group"
+          className="w-full flex items-center justify-between spacing-accordion text-left group"
           onClick={() => setOpen(!open)}
           aria-expanded={open}
         >
@@ -58,7 +58,7 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
               transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
               style={{ overflow: "hidden" }}
             >
-              <p className="pb-6 text-muted text-sm leading-[1.7] max-w-[650px]">{faq.a}</p>
+              <p className="pb-6 text-muted text-sm leading-[1.7] content-width-paragraph">{faq.a}</p>
             </motion.div>
           )}
         </AnimatePresence>
@@ -74,18 +74,18 @@ export default function FAQ() {
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-[1fr_1.5fr] gap-[40px] items-start">
           {/* Left Sticky Panel */}
-          <div className="lg:sticky lg:top-32 max-w-[450px]">
+          <div className="lg:sticky lg:top-32 max-w-[450px] section-heading-sticky">
             <FadeUp>
-              <p className="text-xs uppercase tracking-[0.3em] text-primary font-bold mb-[16px]">FAQ</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-primary font-bold spacing-eyebrow-heading">FAQ</p>
             </FadeUp>
             {/* H2 title scaling strictly to 56px, gap to paragraph = 32px */}
             <AnimatedText
               text="Common Questions About Our Work"
-              className="heading-lg text-[32px] md:text-[44px] lg:text-[56px] text-foreground mb-[32px]"
+              className="heading-lg text-[32px] md:text-[44px] lg:text-[56px] text-foreground spacing-heading-paragraph"
               delay={0.1}
             />
             <FadeUp delay={0.25}>
-              <p className="text-muted text-[20px] leading-[1.7] mb-[40px]">
+              <p className="text-muted text-[20px] leading-[1.7] spacing-paragraph-cta">
                 Learn about how we collaborate, our standard design timelines, and how we handle development setups.
               </p>
             </FadeUp>
@@ -93,7 +93,7 @@ export default function FAQ() {
             <FadeUp delay={0.4}>
               <a
                 href="/contact"
-                className="h-[56px] px-[32px] rounded-[16px] border border-border bg-white text-foreground font-bold text-xs uppercase tracking-widest hover:bg-surface transition-all duration-300 hover:scale-[1.02] inline-flex items-center justify-center gap-[10px]"
+                className="px-8 btn-custom btn-radius border border-border bg-white text-foreground font-semibold text-xs uppercase tracking-widest hover:bg-surface transition-all duration-300 hover:scale-[1.02] inline-flex items-center justify-center gap-2.5"
               >
                 Ask a Question
               </a>

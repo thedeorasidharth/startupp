@@ -9,8 +9,8 @@ const techs = [
 
 export default function TrustedBrands() {
   return (
-    <section className="py-16 border-y border-border relative overflow-hidden bg-white">
-      <div className="container-custom mb-8">
+    <section className="spacing-brands border-y border-border relative overflow-hidden bg-white">
+      <div className="container-custom spacing-heading-paragraph">
         <p className="text-center text-[10px] uppercase tracking-[0.3em] text-muted font-bold">
           Technologies We Use to Build Modern Web Products
         </p>

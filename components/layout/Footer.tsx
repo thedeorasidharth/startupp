@@ -32,13 +32,13 @@ export default function Footer() {
 
   return (
     <footer className="relative border-t border-border bg-white overflow-hidden">
-      {/* Footer Top: 180px, Footer Bottom: 80px */}
-      <div className="container-custom relative z-10 pt-[180px] pb-[80px]">
+      {/* Footer Top: 80px, Footer Bottom: 80px */}
+      <div className="container-custom relative z-10 pt-20 pb-20">
         {/* Top Grid with 40px grid gap */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[40px] pb-[64px] border-b border-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-16 border-b border-border">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-[24px]">
+            <Link href="/" className="flex items-center gap-2 mb-6">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-sm">
                 <Zap size={20} className="text-white" fill="white" />
               </div>
@@ -46,10 +46,10 @@ export default function Footer() {
                 Nova Studio
               </span>
             </Link>
-            <p className="text-muted text-sm leading-[1.7] mb-[24px] max-w-[280px]">
+            <p className="text-muted text-sm leading-[1.7] mb-6 max-w-[280px]">
               Building digital brands that people remember. Quality, communication, and long-term partnerships.
             </p>
-            <div className="flex gap-[8px]">
+            <div className="flex gap-2">
               {socials.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -65,8 +65,8 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-xs font-semibold text-foreground mb-[24px] uppercase tracking-widest">Services</h4>
-            <ul className="space-y-[12px]">
+            <h4 className="text-xs font-semibold text-foreground mb-6 uppercase tracking-widest">Services</h4>
+            <ul className="space-y-3">
               {services.map((s) => (
                 <li key={s}>
                   <Link
@@ -83,8 +83,8 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xs font-semibold text-foreground mb-[24px] uppercase tracking-widest">Company</h4>
-            <ul className="space-y-[12px]">
+            <h4 className="text-xs font-semibold text-foreground mb-6 uppercase tracking-widest">Company</h4>
+            <ul className="space-y-3">
               {quickLinks.map(({ href, label }) => (
                 <li key={label}>
                   <Link
@@ -101,15 +101,15 @@ export default function Footer() {
 
           {/* Newsletter + Contact */}
           <div>
-            <h4 className="text-xs font-semibold text-foreground mb-[24px] uppercase tracking-widest">Newsletter</h4>
-            <p className="text-sm text-muted mb-[16px]">Get the latest insights on digital growth.</p>
-            <div className="flex gap-[8px] mb-[24px]">
+            <h4 className="text-xs font-semibold text-foreground mb-6 uppercase tracking-widest">Newsletter</h4>
+            <p className="text-sm text-muted mb-4">Get the latest insights on digital growth.</p>
+            <div className="flex gap-2 mb-6">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
-                className="flex-1 bg-card border border-border rounded-xl px-4 py-2.5 text-sm text-foreground placeholder-muted focus:outline-none focus:border-primary/50 transition-colors shadow-sm"
+                className="flex-1 bg-card border border-border rounded-xl px-4 py-2.5 text-sm text-foreground placeholder-muted/40 focus:outline-none focus:border-primary/50 transition-colors shadow-sm"
               />
               <button
                 onClick={() => setEmail("")}
@@ -118,7 +118,7 @@ export default function Footer() {
                 <Send size={14} />
               </button>
             </div>
-            <div className="space-y-[8px] text-sm text-muted font-medium">
+            <div className="space-y-2 text-sm text-muted font-medium">
               <p>📧 <a href="mailto:hello@novastudio.com" className="hover:text-foreground transition-colors">hello@novastudio.com</a></p>
               <p>📍 San Francisco, CA</p>
             </div>
@@ -126,11 +126,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row items-center justify-between pt-[32px] gap-[24px]">
+        <div className="flex flex-col md:flex-row items-center justify-between pt-8 gap-6">
           <p className="text-xs text-muted font-medium">
             © {new Date().getFullYear()} Nova Studio. All rights reserved.
           </p>
-          <div className="flex gap-[24px]">
+          <div className="flex gap-6">
             <Link href="#" className="text-xs text-muted hover:text-foreground transition-colors font-medium">Privacy Policy</Link>
             <Link href="#" className="text-xs text-muted hover:text-foreground transition-colors font-medium">Terms of Service</Link>
             <Link href="#" className="text-xs text-muted hover:text-foreground transition-colors font-medium">Cookies</Link>

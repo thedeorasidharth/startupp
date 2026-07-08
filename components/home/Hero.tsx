@@ -80,7 +80,7 @@ export default function Hero() {
   const opacity = useTransform(scrollY, [0, 400], [1, 0]);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-background pb-[220px]">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
       <GridPattern />
 
       <div className="absolute inset-0 pointer-events-none">
@@ -91,13 +91,13 @@ export default function Hero() {
         style={{ y, opacity }}
         className="container-custom relative z-10 pt-36"
       >
-        <div className="grid lg:grid-cols-2 gap-[40px] items-center">
+        <div className="grid lg:grid-cols-2 grid-gap items-center">
           <div>
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-border shadow-sm text-xs text-muted mb-[32px] font-semibold"
+              className="inline-flex items-center gap-2 badge-custom bg-white border border-border shadow-sm text-xs text-muted spacing-eyebrow-heading font-semibold"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               Building Digital Brands That People Remember
@@ -108,7 +108,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="heading-xl text-[44px] md:text-[58px] lg:text-[72px] text-foreground mb-[32px] max-w-[650px] tracking-tight leading-none font-bold"
+              className="heading-xl text-[44px] md:text-[58px] lg:text-[72px] text-foreground spacing-heading-paragraph content-width-hero-heading tracking-tight leading-none font-bold"
             >
               We Build <span className="text-primary">Bespoke</span> Digital Experiences.
             </motion.h1>
@@ -118,7 +118,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35 }}
-              className="text-muted text-[20px] leading-[1.7] mb-[48px] max-w-[650px] font-medium"
+              className="text-muted text-[20px] leading-[1.7] spacing-paragraph-cta content-width-paragraph font-medium"
             >
               From custom SEO mapping and high-performance Web Development to original Figma Brand Strategies, we construct elegant systems for digital positioning.
             </motion.p>
@@ -127,12 +127,12 @@ export default function Hero() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.5 }}
-              className="flex flex-wrap gap-[16px]"
+              className="flex flex-wrap gap-4"
             >
               <MagneticButton>
                 <Link
                   href="/contact"
-                  className="h-[56px] px-[32px] rounded-[16px] bg-primary text-white font-semibold text-sm uppercase tracking-widest hover:bg-primary/95 transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-[10px] shadow-sm"
+                  className="px-8 btn-custom btn-radius bg-primary text-white font-semibold text-xs uppercase tracking-widest hover:bg-primary/95 transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2.5 shadow-sm"
                 >
                   Start Project
                   <ArrowRight size={14} />
@@ -141,7 +141,7 @@ export default function Hero() {
               <MagneticButton>
                 <Link
                   href="/portfolio"
-                  className="h-[56px] px-[32px] rounded-[16px] border border-border bg-white text-foreground font-semibold text-sm uppercase tracking-widest hover:bg-surface transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-[10px]"
+                  className="px-8 btn-custom btn-radius border border-border bg-white text-foreground font-semibold text-xs uppercase tracking-widest hover:bg-surface transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2.5"
                 >
                   View Work
                 </Link>
