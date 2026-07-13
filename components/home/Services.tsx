@@ -1,19 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Search, Code, Palette } from "lucide-react";
+import { ArrowUpRight, Search, Code, BarChart2, ShoppingBag, Target, Share2 } from "lucide-react";
 import { AnimatedText, FadeUp } from "@/components/common/AnimatedText";
 import Link from "next/link";
 
 const mainServices = [
   {
     icon: Code,
-    title: "Web Development",
+    title: "Website Development",
     description:
-      "High-performance, beautifully custom-crafted Next.js marketing websites and complex web applications built from scratch with React and TypeScript. We optimize bundle sizes and code structures for clean responsive rendering.",
+      "We engineer custom Next.js platforms that combine modular typography with flawless mobile responsiveness. High-performance, clean-coded design structures drive immediate indexing authority while elevating conversion metrics, reflecting your brand’s commitment to technical and visual operational excellence.",
     color: "#2563EB",
     tag: "Core Engine",
-    href: "/services/web-development",
+    href: "#services",
     graphic: (
       <div className="w-full h-80 card-radius border border-border bg-card shadow-floating relative overflow-hidden flex items-center justify-center p-6">
         <div className="absolute inset-0 grid-bg opacity-30" />
@@ -26,38 +26,95 @@ const mainServices = [
     ),
   },
   {
-    icon: Search,
-    title: "SEO Optimization",
+    icon: BarChart2,
+    title: "Digital Marketing Consulting",
     description:
-      "Increase organic traffic and ranking keywords through mapping user intent, in-depth keyword analysis, and rigorous technical page audits. We build custom directory schemas and structure semantic markup to help bots index your details.",
+      "Through rigorous growth planning and brand audits, we architect transactional growth frameworks. Nova Studio identifies key audience pathways to position your company ahead of standard competitors, maximizing long-term customer acquisition with scalable, high-yielding positioning strategies.",
     color: "#2563EB",
-    tag: "Visibility",
-    href: "/services/seo",
+    tag: "Growth",
+    href: "#services",
     graphic: (
       <div className="w-full h-80 card-radius border border-border bg-card shadow-floating relative overflow-hidden flex items-center justify-center p-6">
         <div className="absolute inset-0 grid-bg opacity-30" />
         <img
-          src="/images/seo.png"
-          alt="SEO Analytics Dashboard Mockup"
+          src="/images/helix.png"
+          alt="Fintech Marketing Dashboard Mockup"
           className="w-full h-full object-cover rounded-xl shadow-premium border border-border/40 relative z-10"
         />
       </div>
     ),
   },
   {
-    icon: Palette,
-    title: "Branding",
+    icon: ShoppingBag,
+    title: "E-Commerce Solutions",
     description:
-      "Visual identity frameworks, custom typography schemes, style guidelines, and color palettes that make your company stand out. We organize SVG assets and code variables in sync with Figma layouts.",
+      "We construct headless storefronts utilizing secure checkout gateways and inventory tracking. Nova Studio optimizes layout flows to deliver friction-free buyer experiences, unlocking recurring transaction volume and building brand loyalty through design-driven customer pathways.",
     color: "#2563EB",
-    tag: "Design",
-    href: "/services/branding",
+    tag: "Sales System",
+    href: "#services",
+    graphic: (
+      <div className="w-full h-80 card-radius border border-border bg-card shadow-floating relative overflow-hidden flex items-center justify-center p-6">
+        <div className="absolute inset-0 grid-bg opacity-30" />
+        <img
+          src="/images/luminary.png"
+          alt="Headless E-Commerce Storefront Mockup"
+          className="w-full h-full object-cover rounded-xl shadow-premium border border-border/40 relative z-10"
+        />
+      </div>
+    ),
+  },
+  {
+    icon: Target,
+    title: "Google Ads",
+    description:
+      "Deploying structured search engine campaigns, we optimize target bidding structures and search parameters. By capturing active user queries, Nova Studio drives maximum return on ad spend, utilizing meticulous conversion tracking pipelines to deliver verifiable revenue growth.",
+    color: "#2563EB",
+    tag: "Acquisition",
+    href: "#services",
+    graphic: (
+      <div className="w-full h-80 card-radius border border-border bg-card shadow-floating relative overflow-hidden flex items-center justify-center p-6">
+        <div className="absolute inset-0 grid-bg opacity-30" />
+        <img
+          src="/images/zenith.png"
+          alt="Google Ads SaaS Campaign Panel Mockup"
+          className="w-full h-full object-cover rounded-xl shadow-premium border border-border/40 relative z-10"
+        />
+      </div>
+    ),
+  },
+  {
+    icon: Search,
+    title: "SEO Optimization",
+    description:
+      "We elevate search presence through core web vital audits and intent keyword research. Since ranking visibility determines organic reach, our technical optimization models secure top positions, helping your enterprise build sustainable domain authority without paid ads.",
+    color: "#2563EB",
+    tag: "Visibility",
+    href: "#services",
+    graphic: (
+      <div className="w-full h-80 card-radius border border-border bg-card shadow-floating relative overflow-hidden flex items-center justify-center p-6">
+        <div className="absolute inset-0 grid-bg opacity-30" />
+        <img
+          src="/images/seo.png"
+          alt="SEO Technical Audit Analytics Mockup"
+          className="w-full h-full object-cover rounded-xl shadow-premium border border-border/40 relative z-10"
+        />
+      </div>
+    ),
+  },
+  {
+    icon: Share2,
+    title: "Social Media Marketing",
+    description:
+      "Nova Studio builds editorial content programs that capture active digital communities. Because consistent identity creates industry trust, we curate design assets and manage campaigns, unlocking higher user engagement and turning basic followers into valuable brand advocates.",
+    color: "#2563EB",
+    tag: "Engagement",
+    href: "#services",
     graphic: (
       <div className="w-full h-80 card-radius border border-border bg-card shadow-floating relative overflow-hidden flex items-center justify-center p-6">
         <div className="absolute inset-0 grid-bg opacity-30" />
         <img
           src="/images/branding.png"
-          alt="Branding Presentation Mockup"
+          alt="Social Media Visual Brand Board Mockup"
           className="w-full h-full object-cover rounded-xl shadow-premium border border-border/40 relative z-10"
         />
       </div>
@@ -67,7 +124,7 @@ const mainServices = [
 
 export default function Services() {
   return (
-    <section className="section-padding bg-background relative overflow-hidden">
+    <section id="services" className="section-padding bg-background relative overflow-hidden scroll-mt-[90px]">
       <div className="container-custom">
         
         {/* Section Heading to Cards spacing: mb-[64px] */}

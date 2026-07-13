@@ -6,12 +6,12 @@ import { Menu, X, Zap } from "lucide-react";
 import Link from "next/link";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#services", label: "Services" },
+  { href: "#portfolio", label: "Portfolio" },
+  { href: "#faq", label: "FAQ" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -66,7 +66,7 @@ export default function Navbar() {
           {/* CTA larger button (height: 56px, horizontal padding: 32px, rounded: 16px) */}
           <div className="hidden lg:flex items-center">
             <Link
-              href="/contact"
+              href="#contact"
               className="px-8 btn-custom btn-radius inline-flex items-center justify-center text-xs font-semibold uppercase tracking-widest text-white bg-primary hover:bg-primary/95 transition-all duration-300 shadow-button hover:shadow-primary/30 hover:-translate-y-0.5 hover:scale-[1.02]"
             >
               Consultation
@@ -128,7 +128,7 @@ export default function Navbar() {
             </nav>
             <div className="p-6">
               <Link
-                href="/contact"
+                href="#contact"
                 className="block w-full py-4 text-center font-semibold text-white btn-radius bg-primary hover:bg-primary/95 transition-all text-sm uppercase tracking-wider shadow-button"
                 onClick={() => setMobileOpen(false)}
               >

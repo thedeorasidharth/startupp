@@ -37,7 +37,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="section-padding bg-background relative overflow-hidden">
+    <section id="portfolio" className="section-padding bg-background relative overflow-hidden scroll-mt-[90px]">
       <div className="container-custom relative z-10">
         
         {/* Header (Section Heading to Cards spacing: mb-[64px]) */}
@@ -55,7 +55,7 @@ export default function Projects() {
           </div>
           <FadeUp delay={0.3}>
             <Link
-              href="/portfolio"
+              href="#portfolio"
               className="px-8 btn-custom btn-radius border border-border bg-white text-foreground hover:bg-surface transition-all duration-300 hover:scale-[1.02] inline-flex items-center justify-center gap-2.5 font-semibold text-xs uppercase tracking-widest mb-10 md:mb-0"
             >
               View Portfolio
@@ -102,12 +102,13 @@ export default function Projects() {
                     </div>
 
                     {/* Button height: 56px, horizontal padding: 32px, rounded: 16px */}
-                    <button
+                    <Link
+                      href="#portfolio"
                       className="btn-custom btn-radius px-8 w-full border border-border bg-white text-foreground hover:bg-surface font-semibold text-xs uppercase tracking-widest transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2.5"
                     >
                       Live Preview
                       <ArrowUpRight size={14} className="text-primary" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
 

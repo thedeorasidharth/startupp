@@ -48,7 +48,7 @@ export default function FinalCTA() {
           <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
             <MagneticButton>
               <Link
-                href="/contact"
+                href="#contact"
                 className="px-8 btn-custom btn-radius bg-primary text-white font-semibold text-xs uppercase tracking-widest hover:bg-primary/95 transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2.5 shadow-sm"
               >
                 <Calendar size={16} />
@@ -58,7 +58,7 @@ export default function FinalCTA() {
             </MagneticButton>
             <MagneticButton>
               <Link
-                href="/portfolio"
+                href="#portfolio"
                 className="px-8 btn-custom btn-radius border border-border bg-white text-foreground font-semibold text-xs uppercase tracking-widest hover:bg-surface transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2.5"
               >
                 View Our Work

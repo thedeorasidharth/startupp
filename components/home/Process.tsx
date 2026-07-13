@@ -67,7 +67,7 @@ function StepRow({ step, index }: { step: typeof steps[0]; index: number }) {
 
 export default function Process() {
   return (
-    <section className="section-padding bg-surface relative overflow-hidden">
+    <section id="process" className="section-padding bg-surface relative overflow-hidden scroll-mt-[90px]">
       <div className="container-custom">
         <div className="grid lg:grid-cols-[1fr_1.5fr] gap-[40px] items-start">
           

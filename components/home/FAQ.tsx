@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 import { AnimatedText, FadeUp } from "@/components/common/AnimatedText";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -69,7 +70,7 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
 
 export default function FAQ() {
   return (
-    <section className="section-padding bg-background relative overflow-hidden">
+    <section id="faq" className="section-padding bg-background relative overflow-hidden scroll-mt-[90px]">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-[1fr_1.5fr] gap-[40px] items-start">
@@ -91,12 +92,12 @@ export default function FAQ() {
             </FadeUp>
             {/* Button height: 56px, horizontal px-8 */}
             <FadeUp delay={0.4}>
-              <a
-                href="/contact"
+              <Link
+                href="#contact"
                 className="px-8 btn-custom btn-radius border border-border bg-white text-foreground font-semibold text-xs uppercase tracking-widest hover:bg-surface transition-all duration-300 hover:scale-[1.02] inline-flex items-center justify-center gap-2.5"
               >
                 Ask a Question
-              </a>
+              </Link>
             </FadeUp>
           </div>
 

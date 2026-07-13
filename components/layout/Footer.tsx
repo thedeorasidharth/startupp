@@ -14,10 +14,10 @@ const services = [
 ];
 
 const quickLinks = [
-  { href: "/about", label: "About Us" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
+  { href: "#about", label: "About Us" },
+  { href: "#portfolio", label: "Portfolio" },
+  { href: "#faq", label: "FAQ" },
+  { href: "#contact", label: "Contact" },
 ];
 
 const socials = [
@@ -70,7 +70,7 @@ export default function Footer() {
               {services.map((s) => (
                 <li key={s}>
                   <Link
-                    href="/services"
+                    href="#services"
                     className="text-sm text-muted hover:text-foreground transition-colors duration-300 flex items-center gap-2 group font-medium"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-primary opacity-0 group-hover:opacity-100 transition-all" />
@@ -120,7 +120,7 @@ export default function Footer() {
             </div>
             <div className="space-y-2 text-sm text-muted font-medium">
               <p>📧 <a href="mailto:hello@novastudio.com" className="hover:text-foreground transition-colors">hello@novastudio.com</a></p>
-              <p>📍 San Francisco, CA</p>
+              <p>📍 Sheoganj, Rajasthan(India)</p>
             </div>
           </div>
         </div>

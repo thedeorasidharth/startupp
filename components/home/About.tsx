@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <section className="section-padding bg-surface relative overflow-hidden">
+    <section id="about" className="section-padding bg-surface relative overflow-hidden scroll-mt-[90px]">
       <div className="container-custom">
         {/* Asymmetrical 2-column layout (Editorial Style) */}
         <div className="grid lg:grid-cols-2 grid-gap items-start">
@@ -51,7 +51,7 @@ export default function About() {
             {/* Premium Link Button (height 56px, horizontal px-8) */}
             <FadeUp delay={0.5}>
               <Link
-                href="/about"
+                href="#about"
                 className="px-8 btn-custom btn-radius border border-border bg-white text-foreground hover:bg-surface font-semibold text-xs uppercase tracking-widest hover:scale-[1.02] transition-all inline-flex items-center justify-center gap-2.5"
               >
                 Learn More About Us
